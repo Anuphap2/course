@@ -5,13 +5,15 @@ export default function CourseList() {
   const courses = useCourseStore((s) => s.courses);
 
   return (
-    <div className="p-4 border rounded mb-4 bg-white shadow">
-      <h2 className="font-bold mb-4 text-lg">รายวิชาที่ลงทะเบียน</h2>
+    <div className="p-4 border rounded-xl mb-4 bg-white shadow-lg">
+      <h2 className="font-bold mb-4 text-lg text-gray-900">
+        รายวิชาที่ลงทะเบียน
+      </h2>
 
       <div className="overflow-x-auto">
-        <table className="min-w-full border border-gray-300 border-collapse">
+        <table className="min-w-full border border-gray-200 border-collapse">
           <thead>
-            <tr className="bg-gray-100 text-gray-700 text-sm">
+            <tr className="bg-gray-50 text-gray-800 text-sm uppercase tracking-wider">
               <th className="px-3 py-2 text-center border">รหัสวิชา</th>
               <th className="px-3 py-2 text-center border">ชื่อวิชา</th>
               <th className="px-3 py-2 text-center border">หน่วยกิต</th>
@@ -25,13 +27,17 @@ export default function CourseList() {
             {courses.map((c) => (
               <tr
                 key={c.id}
-                className="border-t hover:bg-gray-50 transition-colors"
+                className="border-t hover:bg-gray-100 transition-colors duration-200"
               >
-                <td className="px-3 py-2 text-center">{c.code}</td>
-                <td className="px-3 py-2">{c.nameTH}</td>
-                <td className="px-3 py-2 text-center">{c.credit}</td>
-                <td className="px-3 py-2">{c.teacher}</td>
-                <td className="px-3 py-2 text-center font-semibold">
+                <td className="px-3 py-2 text-center text-gray-800 font-medium">
+                  {c.code}
+                </td>
+                <td className="px-3 py-2 text-gray-800">{c.nameTH}</td>
+                <td className="px-3 py-2 text-center text-gray-700">
+                  {c.credit}
+                </td>
+                <td className="px-3 py-2 text-gray-800">{c.teacher}</td>
+                <td className="px-3 py-2 text-center font-semibold text-gray-900">
                   {c.grade}
                 </td>
                 <td className="px-3 py-2 text-center">

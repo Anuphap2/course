@@ -33,16 +33,17 @@ export default function CourseForm() {
   };
 
   return (
-    <div className="p-4 border rounded mb-4 bg-white shadow">
-      <h2 className="font-bold mb-4 text-lg">เพิ่มรายวิชา</h2>
+    <div className="p-6 bg-gray-50 rounded-2xl shadow-lg">
+      <h2 className="font-extrabold mb-6 text-xl sm:text-2xl text-gray-900">
+        เพิ่มรายวิชา
+      </h2>
 
-      {/* ฟอร์มแบบ responsive */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         {/* รหัสวิชา */}
         <div className="flex flex-col">
           <label
             htmlFor="code"
-            className="text-sm font-medium text-gray-700 mb-1"
+            className="text-sm font-medium text-gray-700 mb-2"
           >
             รหัสวิชา
           </label>
@@ -52,7 +53,7 @@ export default function CourseForm() {
             placeholder="รหัสวิชา"
             value={form.code}
             onChange={handleChange}
-            className="border p-2 rounded"
+            className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition"
           />
         </div>
 
@@ -60,7 +61,7 @@ export default function CourseForm() {
         <div className="flex flex-col">
           <label
             htmlFor="nameTH"
-            className="text-sm font-medium text-gray-700 mb-1"
+            className="text-sm font-medium text-gray-700 mb-2"
           >
             ชื่อวิชา (ไทย)
           </label>
@@ -70,7 +71,7 @@ export default function CourseForm() {
             placeholder="ชื่อวิชา (ไทย)"
             value={form.nameTH}
             onChange={handleChange}
-            className="border p-2 rounded"
+            className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition"
           />
         </div>
 
@@ -78,7 +79,7 @@ export default function CourseForm() {
         <div className="flex flex-col">
           <label
             htmlFor="nameEN"
-            className="text-sm font-medium text-gray-700 mb-1"
+            className="text-sm font-medium text-gray-700 mb-2"
           >
             ชื่อวิชา (อังกฤษ)
           </label>
@@ -88,7 +89,7 @@ export default function CourseForm() {
             placeholder="ชื่อวิชา (อังกฤษ)"
             value={form.nameEN}
             onChange={handleChange}
-            className="border p-2 rounded"
+            className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition"
           />
         </div>
 
@@ -96,7 +97,7 @@ export default function CourseForm() {
         <div className="flex flex-col">
           <label
             htmlFor="credit"
-            className="text-sm font-medium text-gray-700 mb-1"
+            className="text-sm font-medium text-gray-700 mb-2"
           >
             หน่วยกิต
           </label>
@@ -107,7 +108,7 @@ export default function CourseForm() {
             placeholder="หน่วยกิต"
             value={form.credit}
             onChange={handleChange}
-            className="border p-2 rounded"
+            className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition"
           />
         </div>
 
@@ -115,7 +116,7 @@ export default function CourseForm() {
         <div className="flex flex-col">
           <label
             htmlFor="teacher"
-            className="text-sm font-medium text-gray-700 mb-1"
+            className="text-sm font-medium text-gray-700 mb-2"
           >
             อาจารย์ผู้สอน
           </label>
@@ -125,7 +126,7 @@ export default function CourseForm() {
             placeholder="อาจารย์ผู้สอน"
             value={form.teacher}
             onChange={handleChange}
-            className="border p-2 rounded"
+            className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition"
           />
         </div>
 
@@ -133,7 +134,7 @@ export default function CourseForm() {
         <div className="flex flex-col">
           <label
             htmlFor="grade"
-            className="text-sm font-medium text-gray-700 mb-1"
+            className="text-sm font-medium text-gray-700 mb-2"
           >
             เกรด
           </label>
@@ -142,7 +143,7 @@ export default function CourseForm() {
             name="grade"
             value={form.grade}
             onChange={handleChange}
-            className="border p-2 rounded"
+            className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition"
           >
             {["A", "B+", "B", "C+", "C", "D+", "D", "F"].map((g) => (
               <option key={g} value={g}>
@@ -153,10 +154,9 @@ export default function CourseForm() {
         </div>
       </div>
 
-      {/* ปุ่มเพิ่ม */}
       <button
         onClick={handleSubmit}
-        className="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow"
+        className="mt-6 w-full bg-gray-900 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-gray-700 transition-all"
       >
         เพิ่มรายวิชา
       </button>

@@ -9,7 +9,7 @@ export default function DropButton({ id }: { id: number }) {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded"
+        className="bg-gray-900 hover:bg-gray-700 text-white px-2 py-1 rounded-lg shadow transition transform hover:scale-105"
       >
         ถอน
       </button>
