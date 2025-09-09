@@ -8,7 +8,7 @@ export default function CourseForm() {
     code: "",
     nameTH: "",
     nameEN: "",
-    credit: 0,
+    credit: 3,
     teacher: "",
     grade: "A",
   });
