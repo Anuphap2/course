@@ -5,7 +5,11 @@ export default function DropButton({ id }: { id: number }) {
 
   return (
     <button
-      onClick={() => dropCourse(id)}
+      onClick={() => {
+        if (window.confirm("คุณแน่ใจหรือไม่ว่าต้องการถอนรายวิชานี้?")) {
+          dropCourse(id);
+        }
+      }}
       className="bg-red-500 text-white px-2 py-1 rounded"
     >
       ถอน
